@@ -18,3 +18,5 @@ if (num2 >  num0 && num3 > num2){
 } else {
     console.log("Decreasing!!!");
 }
+
+
