@@ -65,10 +65,48 @@
 // }
 
 
-//page 27 (7)
-let userInput = Number(prompt("Enter your number here:"))
-while(userInput > 0){
-    console.log(userInput);
-    userInput = Number(prompt("Enter your number here:"))
+// //page 27 (7)
+// let userInput = Number(prompt("Enter your number here:"))
+// let index = 0;
+// while(userInput > 0){
+//     console.log(userInput);
+//     userInput = Number(prompt("Enter your number here:"))
+//     index = index + 1
+// }
+// console.log(userInput);
+
+// //page 27 (10)
+// let userInput = +prompt("Enter your number:")
+// console.log("the rightMost number for your input is " +userInput.toString().charAt(0));
+
+// // //page 28-(13)
+// let x = +prompt("Enter your choice:")
+// let y = +prompt("Enter your choice:")
+// let numberOfX = 0
+// let numberOfY = 0
+
+// while(x >= 0){
+//     let rightDigit = x % 10;
+//     if (rightDigit === y){
+//         console.log("rightDigit" + "(" +rightDigit+")" + "===" + "d" + "(" + d + ")");
+//          numberOfX++;
+//     }
+//     console.log(x);
+//     x = parseInt(x / 10)
+// }
+//     console.log("your choice is " + x);
+//     console.log("the number of appearance is " + y);
+
+
+let totaltemp2000 = 0 
+let numOfDays = 3
+let numOfDaysAvg = numOfDays
+
+while(numOfDays > 0 ){
+    let currenttemp = +prompt("Enter july 2000 temp " + numOfDays )
+    totaltemo2000 = totaltemp2000 + currenttemp
+    numOfDays--; 
 }
-console.log(userInput);
+
+let avgTemp = parseInt(totaltemp2000 / numOfDays)
+console.log(avgTemp);

@@ -1,0 +1,95 @@
+body{
+    text-align: center;
+    font-size: 14px;
+}
+.movies-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    justify-content: center;
+    grid-auto-rows: 1fr;
+    justify-content: center;
+}
+
+.movies-container > div{
+    border-radius: 30px;
+    border: 1px solid black;
+    margin: 10px;
+    aspect-ratio: 1 / 1;
+    position: relative;
+}
+
+.movies-container > div img{
+    width: 50%;
+    aspect-ratio: 1 / 1 ;
+    display: block;
+    margin: auto;
+}
+
+.spinner-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner-container{
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    border-radius: 50%;
+}
+
+.spinner-container span{
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    width: 90%;
+    height: 90%;
+    display: block;
+    border-left-color:#007bff ;
+    border-radius: 50%;
+    animation-name: spin;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear ;
+}
+
+.summerOverlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 0;
+    left: 0;
+    color: white;
+    border-radius: 30px;
+    overflow-y:auto ;
+}
+
+.summerOverlay::before{
+    content: "\00d7";
+    position: absolute;
+    right: 20px;
+    font-size: 30px;
+}
+
+#chart-card{
+    width: 500px;
+    height: 500px;
+    margin: 0 auto;
+
+}
+
+
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
